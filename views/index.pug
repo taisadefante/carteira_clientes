@@ -16,6 +16,7 @@ block conteudo
                 th(scope='col') Linkedin 
                 th(scope='col') Aniversário 
                 th(scope='col') Cidade
+                th(scope='col') Importante
                 th(scope='col') Ações
         tbody 
             for client, indice in clients 
@@ -31,7 +32,7 @@ block conteudo
                         a(href=`${client.linkedin}` target="_blank") #{client.linkedin}  
                     td #{client.aniversario}
                     td #{client.endereco}
-                    td #{client.Importante}   
+                    td #{client.importante}   
                     td
                         a(href=`/clients/${client.id}/edit`).btn.btn-primary Editar
                         form(action=`/clients/${client.id}?_method=DELETE` method='POST' style='display: inline')

@@ -21,37 +21,30 @@ export default db.define('client', {
 
     cargo: {
         type: Sequelize.STRING,
-        allowNull: true
     },
 
     email: {
         type: Sequelize.STRING,
-        allowNull: false
     },
 
     telefone: {
         type: Sequelize.STRING,
-        allowNull: true
     },
 
     linkedin: {
         type: Sequelize.STRING,
-        allowNull: true
     },
 
     aniversario: {
         type: Sequelize.STRING,
-        allowNull: true
     },
 
     endereco: {
         type: Sequelize.STRING,
-        allowNull: true
     },
 
     importante: {
         type: Sequelize.STRING,
-        allowNull: true
     }
 
 
