@@ -1,5 +1,13 @@
 export interface IClients{
     id: number,
     name: string,
-    email: string
+    empresa: string,
+    cargo: string,
+    email: string,
+    telefone: string,
+    linkedin: string,
+    aniversario: string,
+    endereco: string,
+    importante: string
+
 }

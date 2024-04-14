@@ -3,12 +3,31 @@ block titulo
     title Cadastrar novo cliente
 
 block conteudo
-    h1 Cadastrar novo cliente
+    h1.text-primary Cadastrar novo cliente
     form(action="/clients/" method="post")
         .mb-3   
             label.form-label(for='name') Nome 
             input#name.form-control(type='text' value='' required name='name' placeholder='Digite o nome')
+        .mb-3   
+            label.form-label(for='empresa') Empresa
+            input#name.form-control(type='text' value='' required name='empresa' placeholder='Digite o nome da empresa')
+        .mb-3   
+            label.form-label(for='cargo') Digite o cargo
+            input#name.form-control(type='text' value='' required name='cargo' placeholder='Digite o cargo')
         .mb-3
-            label.form-label(for='email') email 
+            label.form-label(for='email') E-mail 
             input#email.form-control(type='email' value='' required name='email' placeholder='Digite o email')
+        .mb-3
+            label.form-label(for='telefone') Telefone
+            input#email.form-control(type='number' value='' required name='telefone' placeholder='Digite seu telefone')
+        .mb-3   
+            label.form-label(for='linkedin') Linkedin  
+            input#name.form-control(type='text' value='' required name='linkedin' placeholder='Linkedin')  
+        .mb-3   
+            label.form-label(for='aniversario') Data Aniversário
+            input#name.form-control(type='text' value='' required name='aniversario' placeholder='Digite a data do aniversario')
+        .mb-3   
+            label.form-label(for='endereco') Cidade 
+            input#name.form-control(type='text' value='' required name='endereco' placeholder='Digite o endereço')
+
         button(type='submit' value='Submit').btn.btn-success Enviar

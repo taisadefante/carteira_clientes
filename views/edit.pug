@@ -3,12 +3,33 @@ block titulo
     title Atualizar cliente
 
 block conteudo
-    h1 Atualizar cliente
+    h1.text-primary Atualizar Cliente
     form(action=`/clients/${client.id}?_method=PUT` method="POST")
-        .mb-3   
+          .mb-3   
             label.form-label(for='name') Nome 
-            input#name.form-control(type='text' value=`${client.name}` required name='name' placeholder='Digite o nome')
+            input#name.form-control(type='text' value='' required name='name' placeholder='Digite o nome')
+        .mb-3   
+            label.form-label(for='empresa') Empresa
+            input#name.form-control(type='text' value='' required name='empresa' placeholder='Digite o nome da empresa')
+        .mb-3   
+            label.form-label(for='cargo') Digite o cargo
+            input#name.form-control(type='text' value='' required name='cargo' placeholder='Digite o cargo')
         .mb-3
-            label.form-label(for='email') email 
-            input#email.form-control(type='email' value=`${client.email}` required name='email' placeholder='Digite o email')
+            label.form-label(for='email') E-mail 
+            input#email.form-control(type='email' value='' required name='email' placeholder='Digite o email')
+        .mb-3
+            label.form-label(for='telefone') Telefone
+            input#email.form-control(type='number' value='' required name='telefone' placeholder='Digite seu telefone')
+        .mb-3   
+            label.form-label(for='linkedin') Linkedin  
+            input#name.form-control(type='text' value='' required name='linkedin' placeholder='Linkedin')  
+        .mb-3   
+            label.form-label(for='aniversario') Data Aniversário
+            input#name.form-control(type='text' value='' required name='aniversario' placeholder='Digite a data do aniversario')
+        .mb-3   
+            label.form-label(for='endereco') Cidade 
+            input#name.form-control(type='text' value='' required name='endereco' placeholder='Digite o endereço')
+        .mb-3   
+            label.form-label(for='Importante') Importante 
+            input#name.form-control(type='text' value='' required name='importante' placeholder='Digite seu texto')
         button(type='submit' value='Submit').btn.btn-success Atualizar

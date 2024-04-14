@@ -4,7 +4,7 @@ block titulo
 
 block conteudo
     .card
-        h5.card-header Detalhes do(a) cliente #{client.name}
+        h5.card-header.text-primary Detalhes do(a) cliente #{client.name}
         .card-body
             p
                 strong ID:
@@ -13,8 +13,29 @@ block conteudo
                 strong Name: 
                 | #{client.name}
             p
+                strong Empresa: 
+                | #{client.empresa}
+            p
+                strong Cargo: 
+                | #{client.cargo}
+            p
                 strong Email:
                 | #{client.email}
+            p
+                strong Telefone:
+                | #{client.telefone}
+            p
+                strong Linkedin:
+                | #{client.linkedin}
+            p
+                strong Aniversário:
+                | #{client.aniversario}
+            p
+                strong Cidade:
+                | #{client.endereco}
+            p
+                strong Importante:
+                | #{client.importante}
             p
                 strong Data de Criação: 
                 | #{client.createdAt}

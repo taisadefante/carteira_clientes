@@ -3,13 +3,19 @@ block titulo
     title Lista de Clientes
 
 block conteudo
-    h1 Lista de clientes
+    h1.text-primary Lista de Clientes
     table.table 
         thead
             tr 
                 th(scope='col') ID
                 th(scope='col') Nome
+                th(scope='col') Empresa  
+                th(scope='col') Cargo
                 th(scope='col') Email
+                th(scope='col') Telefone 
+                th(scope='col') Linkedin 
+                th(scope='col') Aniversário 
+                th(scope='col') Cidade
                 th(scope='col') Ações
         tbody 
             for client, indice in clients 
@@ -17,9 +23,17 @@ block conteudo
                     th(scope='row') #{client.id} 
                     td
                         a(href=`/clients/${client.id}`) #{client.name} 
-                    td #{client.email}  
+                    td #{client.empresa}
+                    td #{client.cargo}
+                    td #{client.email}
+                    td #{client.telefone} 
+                    td  
+                        a(href=`${client.linkedin}` target="_blank") #{client.linkedin}  
+                    td #{client.aniversario}
+                    td #{client.endereco}
+                    td #{client.Importante}   
                     td
                         a(href=`/clients/${client.id}/edit`).btn.btn-primary Editar
                         form(action=`/clients/${client.id}?_method=DELETE` method='POST' style='display: inline')
-                            button(type='submit' value='submit' onclick='return confirm("Tem certeza que deseja apagar?")').btn.btn-danger Excluir
+                            button(type='submit' value='submit' onclick='return confirm("Tem certeza que deseja apagar?")').btn.btn-danger.m-1 X
     a(href="/clients/create").btn.btn-success Novo Cliente                  
