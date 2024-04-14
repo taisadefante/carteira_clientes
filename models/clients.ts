@@ -1,5 +1,5 @@
-export interface Iclients {
-  id: number;
-  name: string;
-  email: string;
+export interface IClients{
+    id: number,
+    name: string,
+    email: string
 }
