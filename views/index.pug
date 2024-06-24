@@ -34,7 +34,7 @@ block conteudo
                     td #{client.endereco}
                     td #{client.importante}   
                     td
-                        a(href=`/clients/${client.id}/edit`).btn.btn-primary Editar
+                        a(href=`/clients/${client.id}/edit`).btn.btn-primary ✏️
                         form(action=`/clients/${client.id}?_method=DELETE` method='POST' style='display: inline')
                             button(type='submit' value='submit' onclick='return confirm("Tem certeza que deseja apagar?")').btn.btn-danger.m-1 X
     a(href="/clients/create").btn.btn-primary Novo Cliente                  
